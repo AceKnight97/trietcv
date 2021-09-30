@@ -1,7 +1,9 @@
 // import classnames from 'classnames';
 import {
+  ArrowRightOutlined,
   EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined,
 } from '@ant-design/icons';
+import { Button } from 'antd';
 import _ from 'lodash';
 import React from 'react';
 import { INDUSTRY_KNOWLEDGE_DATA, LANGUAGE_DATA, SOCICAL_DATA } from '../../../Constants/cvInfo';
@@ -14,6 +16,7 @@ import searchIc from '../../../Images/Pages/CVs/search.svg';
 import soccerIc from '../../../Images/Pages/CVs/soccer.svg';
 import writtingIc from '../../../Images/Pages/CVs/writing.svg';
 import InfoRow from './infoRow';
+import PropTypes from 'prop-types';
 
 const HOBBIES_ARR1 = [
   {
@@ -72,7 +75,7 @@ const GENERAL_INFO = [
   },
 ];
 
-const CVInformation = () => {
+const CVInformation = (props) => {
   const showHeader = () => (
     <div className='my-cv-header'>
       <img src={avatarIc} className='my-cv-avatar' alt='Avatar img' />
@@ -189,13 +192,24 @@ const CVInformation = () => {
       {showLanguages()}
       {showSocial()}
       {showHobbies()}
+      <Button
+        block
+        type='ghost'
+        className='cv-info-more-inf-btn'
+        onClick={props.onClickDetailCV}
+      >
+        More information
+        <ArrowRightOutlined />
+      </Button>
     </div>
   );
 };
 
 CVInformation.defaultProps = {
+  onClickDetailCV:()=>{}
 };
 CVInformation.propTypes = {
+  onClickDetailCV:PropTypes.func,
 };
 
 export default CVInformation;

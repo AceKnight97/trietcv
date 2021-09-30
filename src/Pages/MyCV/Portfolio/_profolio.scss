@@ -26,6 +26,13 @@
     }
     &-left {
       overflow: auto;
+      &-back-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 48px;
+        // width: 200px;
+      }
     }
     &-right {
       .carousel-root {

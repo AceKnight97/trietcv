@@ -36,39 +36,20 @@ const MyCV = () => {
 
         {
           isShowDetails
-            ? <Portfolio />
+            ? <Portfolio
+            onClickBack={onClickBack}
+            />
             : (
               <>
-                <CVInformation />
+                <CVInformation
+                onClickDetailCV={onClickDetailCV}
+                />
                 <CVDetails />
               </>
             )
         }
 
       </div>
-
-      <Button
-        type='ghost'
-        className='cv-btn-back'
-        onClick={onClickBack}
-      >
-        <ArrowLeftOutlined />
-        {isShowDetails ? 'Back' : 'Home'}
-      </Button>
-
-      {
-        !isShowDetails && (
-          <Button
-            type='ghost'
-            className='cv-btn-details'
-            onClick={onClickDetailCV}
-          // icon={}
-          >
-            More information
-            <ArrowRightOutlined />
-          </Button>
-        )
-      }
     </div>
   );
 };

@@ -13,6 +13,7 @@ import cardiac from '../Images/Pages/CVs/cardiac.svg';
 import nano from '../Images/Pages/CVs/nano.png';
 import mdm from '../Images/Pages/CVs/mdm.svg';
 import biocare from '../Images/Pages/CVs/biocare.svg';
+import workside from '../Images/Pages/CVs/workside.svg';
 
 export const SOCICAL_DATA = [
   {
@@ -25,7 +26,7 @@ export const SOCICAL_DATA = [
   },
 ];
 export const INDUSTRY_KNOWLEDGE_DATA = [
-  'Web-App Develop',
+  'Web-App Development',
   'Technical Research',
   'Team work',
   'Project progressing',
@@ -39,7 +40,7 @@ export const EXPERIENCE_DATA = [
   {
     name: 'Impact Technical Resources VN',
     position: 'Software - Front-end developer',
-    duration: 'Jan 2020 - Present - 1 year, Hochiminh city',
+    duration: 'Jan 2020 - Present, Hochiminh city',
     content: ['I develop Web-App products by using React/React Native. Experienced with a lean product development process: research, design, coding, test, and iterate.'],
   },
   {
@@ -119,14 +120,18 @@ export const TEAM_PRODUCTS = [
     link: 'http://admindashboard.fiot.vn',
   },
   {
-    name: 'MD Matrix - Telemed',
-    icon: mdm,
-    link: 'https://telemed.alpha.bioflux.io',
+    name: 'Workside',
+    icon: workside,
+    link: 'https://workside-admin.projects.itrvn.com',
   },
   {
     name: 'Biocare Pain Management',
     icon: biocare,
     link: 'https://play.google.com/store/apps/details?id=biotricity.bioflux.biocare.android.app',
   },
-
+  {
+    name: 'MD Matrix - Telemed',
+    icon: mdm,
+    link: 'https://telemed.alpha.bioflux.io',
+  },
 ];

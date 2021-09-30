@@ -26,3 +26,13 @@
     // color: red;
   }
 }
+.cv-info {
+  &-more-inf-btn {
+    margin-top: 24px;
+    color: $blue-6;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

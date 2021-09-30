@@ -73,18 +73,18 @@ export const SAVE_MONEY_APP = {
         type: 'LINK',
         link: 'https://docs.google.com/presentation/d/1WFH_LRwNHAPLakqr_WVxxYhWldTpZ5hZmWKubg4XqMU/edit?usp=sharing',
       },
-      {
-        type: 'CUSTOM',
-        children: () => (
-          <Link to={{
-            pathname: '/home',
-            state: { current: PAGE_MANAGER.CONTACT },
-          }}
-          >
-            Tell me your idea.
-          </Link>
-        ),
-      },
+      // {
+      //   type: 'CUSTOM',
+      //   children: () => (
+      //     <Link to={{
+      //       pathname: '/home',
+      //       state: { current: PAGE_MANAGER.CONTACT },
+      //     }}
+      //     >
+      //       Tell me your idea.
+      //     </Link>
+      //   ),
+      // },
     ],
     [
       {

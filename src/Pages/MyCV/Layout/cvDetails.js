@@ -73,9 +73,11 @@ const CVDetails = () => {
         }}
       />
 
-      {_.map(TEAM_PRODUCTS, (x, i) => (
-        <TeamProduct key={i} data={x} />
-      ))}
+      {
+        _.map(TEAM_PRODUCTS, (x, i) => (
+          <TeamProduct key={i} data={x} />
+        ))
+      }
 
     </>
   );

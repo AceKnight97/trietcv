@@ -6,10 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const ProjectInfo = (props) => {
-  // const [state, setState] = useMergeState({
-  //   isShowDetails: false,
-  // });
-  // const { isShowDetails } = state;
   const {
     data, isShowDetails, toggleClick, className,
   } = props;
@@ -31,21 +27,22 @@ const ProjectInfo = (props) => {
     const {
       title, value, type, children, link,
     } = item;
+    // console.log({title, value, type, children, link,})
     switch (type) {
       case 'LINK':
         return (
-          <div className='project-info-right-row-item'>
+          <>
             <span>{`${title || ''} `}</span>
             <a href={link} target=' ' className=''>{value}</a>
-          </div>
+          </>
         );
       case 'CUSTOM':
         return children();
       default:
         return (
-          <div className='project-info-right-row-item'>
+          <>
             <span>{`${title || ''} ${value || ''}`}</span>
-          </div>
+          </>
         );
     }
   };
@@ -59,7 +56,7 @@ const ProjectInfo = (props) => {
     if (rowArray.length === 1) {
       return (
         <div className='project-info-right-row'>
-          <span>{`${leftItem.title || ''} ${leftItem.value || ''}`}</span>
+          {renderItem(leftItem)}
         </div>
       );
     }
@@ -67,8 +64,12 @@ const ProjectInfo = (props) => {
 
     return (
       <div className='project-info-right-row' key={index}>
+        <div className='project-info-right-row-item'>
         {renderItem(leftItem)}
+      </div>
+        <div className='project-info-right-row-item'>
         {renderItem(rightItem)}
+      </div>
       </div>
     );
   };

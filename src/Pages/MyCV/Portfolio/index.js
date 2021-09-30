@@ -1,11 +1,14 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Modal from 'antd/lib/modal/Modal';
 import ProjectInfo from '../../../Components/UI/ProjectInfo';
 import { useMergeState } from '../../../Helpers/customHooks';
 import { SAVE_MONEY_APP, BIOACRE_CARDIAC, NANO_DASHBOARD } from './data';
 import cloverIc from '../../../Images/Pages/CVs/clover.svg';
+import { Button } from 'antd';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 
 const PROJECT_DATA = {
   SMA: 'SMA',
@@ -14,7 +17,7 @@ const PROJECT_DATA = {
 };
 const { SMA, BCCA, NANO } = PROJECT_DATA;
 
-const Portfolio = () => {
+const Portfolio = (props) => {
   const [state, setState] = useMergeState({
     current: '',
     previewImg: undefined,
@@ -106,6 +109,16 @@ const Portfolio = () => {
           toggleClick={toggleClickNaNo}
           isShowDetails={current === NANO}
         />
+
+      <Button
+        block
+          type='ghost'
+          className='portfolio-body-left-back-btn'
+          onClick={props.onClickBack}
+      >
+        <ArrowLeftOutlined />
+        Back
+      </Button>
       </div>
 
       <div className='portfolio-body-right'>
@@ -127,7 +140,6 @@ const Portfolio = () => {
         centered
         footer={null}
         className='profolio-modal'
-        // width='100%'
       >
         <img src={previewImg} alt='img preview' />
       </Modal>
@@ -136,8 +148,10 @@ const Portfolio = () => {
 };
 
 Portfolio.defaultProps = {
+  onClickBack: ()=>{},
 };
 Portfolio.propTypes = {
+  onClickBack: PropTypes.func,
 };
 
 export default Portfolio;
