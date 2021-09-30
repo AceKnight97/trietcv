@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/trietcv/static/css/main.30faf17f.chunk.css",
-    "main.js": "/trietcv/static/js/main.7cda4315.chunk.js",
-    "main.js.map": "/trietcv/static/js/main.7cda4315.chunk.js.map",
+    "main.css": "/trietcv/static/css/main.b310eb89.chunk.css",
+    "main.js": "/trietcv/static/js/main.f80f700a.chunk.js",
+    "main.js.map": "/trietcv/static/js/main.f80f700a.chunk.js.map",
     "runtime-main.js": "/trietcv/static/js/runtime-main.a0b040ef.js",
     "runtime-main.js.map": "/trietcv/static/js/runtime-main.a0b040ef.js.map",
     "static/css/2.c75fc037.chunk.css": "/trietcv/static/css/2.c75fc037.chunk.css",
-    "static/js/2.271bcff6.chunk.js": "/trietcv/static/js/2.271bcff6.chunk.js",
-    "static/js/2.271bcff6.chunk.js.map": "/trietcv/static/js/2.271bcff6.chunk.js.map",
+    "static/js/2.1e29e69b.chunk.js": "/trietcv/static/js/2.1e29e69b.chunk.js",
+    "static/js/2.1e29e69b.chunk.js.map": "/trietcv/static/js/2.1e29e69b.chunk.js.map",
     "index.html": "/trietcv/index.html",
     "static/css/2.c75fc037.chunk.css.map": "/trietcv/static/css/2.c75fc037.chunk.css.map",
-    "static/css/main.30faf17f.chunk.css.map": "/trietcv/static/css/main.30faf17f.chunk.css.map",
-    "static/js/2.271bcff6.chunk.js.LICENSE.txt": "/trietcv/static/js/2.271bcff6.chunk.js.LICENSE.txt",
+    "static/css/main.b310eb89.chunk.css.map": "/trietcv/static/css/main.b310eb89.chunk.css.map",
+    "static/js/2.1e29e69b.chunk.js.LICENSE.txt": "/trietcv/static/js/2.1e29e69b.chunk.js.LICENSE.txt",
     "static/media/bcca-1.058c56c7.jpg": "/trietcv/static/media/bcca-1.058c56c7.jpg",
     "static/media/bcca-2.2456e70c.jpg": "/trietcv/static/media/bcca-2.2456e70c.jpg",
     "static/media/bcca-3.1d17381b.jpg": "/trietcv/static/media/bcca-3.1d17381b.jpg",
@@ -66,13 +66,14 @@
     "static/media/soccer.a5621dcc.svg": "/trietcv/static/media/soccer.a5621dcc.svg",
     "static/media/sourcetree.a782f129.svg": "/trietcv/static/media/sourcetree.a782f129.svg",
     "static/media/vs.04315a89.svg": "/trietcv/static/media/vs.04315a89.svg",
+    "static/media/workside.dd71c7b0.svg": "/trietcv/static/media/workside.dd71c7b0.svg",
     "static/media/writing.0ce167e0.svg": "/trietcv/static/media/writing.0ce167e0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a0b040ef.js",
     "static/css/2.c75fc037.chunk.css",
-    "static/js/2.271bcff6.chunk.js",
-    "static/css/main.30faf17f.chunk.css",
-    "static/js/main.7cda4315.chunk.js"
+    "static/js/2.1e29e69b.chunk.js",
+    "static/css/main.b310eb89.chunk.css",
+    "static/js/main.f80f700a.chunk.js"
   ]
 }
