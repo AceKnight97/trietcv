@@ -39,6 +39,9 @@ import nano13 from '../../../Images/Pages/CVs/NANO/nano-13.jpg';
 import nano14 from '../../../Images/Pages/CVs/NANO/nano-14.jpg';
 import nano15 from '../../../Images/Pages/CVs/NANO/nano-15.jpg';
 
+import aceStoreIc from '../../../Images/Pages/CVs/aceStoreIc.svg';
+
+
 const SMA_IMAGES = [
   signInImg, detailsImg, journalImg, insightImg, messageImg, profileImg, doneImg,
 ];
@@ -158,6 +161,37 @@ export const NANO_DASHBOARD = {
   ],
   images: NANO_IMAGES,
 
+};
+
+export const ACE_STORE_DATA = {
+  icon: aceStoreIc,
+  title: 'Ace Store',
+  iconClassName: '',
+  rows: [
+    [
+      {
+        title: '- Take a look:',
+        value: 'link.',
+        type: 'LINK',
+        link: 'https://www.figma.com/file/a9mQjKJrwANQkvSx15nwsv/Ace-Store?node-id=37%3A34',
+      },
+      {
+        title: '- Type:',
+        value: 'Website (in designing period).',
+      },
+    ],
+    [
+      {
+        title: '- Description:',
+        value: `
+        The website is a simple shopping store designed and developed by myself.
+        It contains basic features to help people to order food.
+        In the other side, the shop owner can manage the orders, their customer and the production information.
+        `,
+      },
+    ],
+  ],
+  images: NANO_IMAGES,
 };
 
 const temp = `This web portal is the longest project I've ever done and still doing it now. I also coded the first line of the project. 

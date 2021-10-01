@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Modal from 'antd/lib/modal/Modal';
 import ProjectInfo from '../../../Components/UI/ProjectInfo';
 import { useMergeState } from '../../../Helpers/customHooks';
-import { SAVE_MONEY_APP, BIOACRE_CARDIAC, NANO_DASHBOARD } from './data';
+import { SAVE_MONEY_APP, BIOACRE_CARDIAC, NANO_DASHBOARD, ACE_STORE_DATA } from './data';
 import cloverIc from '../../../Images/Pages/CVs/clover.svg';
 import { Button } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
@@ -14,8 +14,9 @@ const PROJECT_DATA = {
   SMA: 'SMA',
   BCCA: 'BCCA',
   NANO: 'NANO',
+  ACE_STORE_: 'ACE_STORE',
 };
-const { SMA, BCCA, NANO } = PROJECT_DATA;
+const { SMA, BCCA, NANO, ACE_STORE } = PROJECT_DATA;
 
 const Portfolio = (props) => {
   const [state, setState] = useMergeState({
@@ -40,6 +41,9 @@ const Portfolio = (props) => {
   };
   const toggleClickNaNo = () => {
     setState({ current: current === NANO ? '' : NANO });
+  };
+  const toggleClickAceStore = () => {
+    setState({ current: current === ACE_STORE ? '' : ACE_STORE });
   };
 
   const renderHeader = () => (
@@ -109,7 +113,12 @@ const Portfolio = (props) => {
           toggleClick={toggleClickNaNo}
           isShowDetails={current === NANO}
         />
-
+        <ProjectInfo
+          className='mt-24'
+          data={ACE_STORE_DATA}
+          toggleClick={toggleClickAceStore}
+          isShowDetails={current === ACE_STORE}
+        />
       <Button
         block
           type='ghost'

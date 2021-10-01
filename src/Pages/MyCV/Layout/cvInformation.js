@@ -1,9 +1,10 @@
 // import classnames from 'classnames';
 import {
   ArrowRightOutlined,
-  EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined,
+  EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined,DownloadOutlined
 } from '@ant-design/icons';
 import { Button } from 'antd';
+import fileDownload from 'js-file-download';
 import _ from 'lodash';
 import React from 'react';
 import { INDUSTRY_KNOWLEDGE_DATA, LANGUAGE_DATA, SOCICAL_DATA } from '../../../Constants/cvInfo';
@@ -17,6 +18,8 @@ import soccerIc from '../../../Images/Pages/CVs/soccer.svg';
 import writtingIc from '../../../Images/Pages/CVs/writing.svg';
 import InfoRow from './infoRow';
 import PropTypes from 'prop-types';
+import trietCVPDF from '../../../Assets/triet-cv.pdf';
+import mime from 'mime-types';
 
 const HOBBIES_ARR1 = [
   {
@@ -63,12 +66,12 @@ const GENERAL_INFO = [
     icon: <PhoneOutlined />,
     title: '(+84) 819 541 897',
   },
-  {
-    icon: <GlobalOutlined />,
-    title: 'Website',
-    type: 'LINK',
-    link: 'https://aceknight97.github.io/staticpromotionalwebsite',
-  },
+  // {
+  //   icon: <GlobalOutlined />,
+  //   title: 'Website',
+  //   type: 'LINK',
+  //   link: 'https://aceknight97.github.io/staticpromotionalwebsite',
+  // },
   {
     icon: <EnvironmentOutlined />,
     title: 'District 7, Hochiminh city',
@@ -192,6 +195,27 @@ const CVInformation = (props) => {
       {showLanguages()}
       {showSocial()}
       {showHobbies()}
+
+      {/* <a href='../' target="_blank" rel="noopener noreferrer" download>
+   <Button>
+      <i className="fas fa-download"/>
+      Download File
+   </Button>
+</a> */}
+
+      <a href={trietCVPDF} target="_blank" rel="noopener noreferrer" download>
+      <Button
+        block
+        className='cv-info-more-inf-btn'
+        type='ghost'
+        icon={<DownloadOutlined />}
+      >
+        Download CV
+      </Button>
+      </a>
+      
+      
+      
       <Button
         block
         type='ghost'
