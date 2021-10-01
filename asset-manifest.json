@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/trietcv/static/css/main.b310eb89.chunk.css",
-    "main.js": "/trietcv/static/js/main.f80f700a.chunk.js",
-    "main.js.map": "/trietcv/static/js/main.f80f700a.chunk.js.map",
+    "main.css": "/trietcv/static/css/main.d1a32a67.chunk.css",
+    "main.js": "/trietcv/static/js/main.67a406a1.chunk.js",
+    "main.js.map": "/trietcv/static/js/main.67a406a1.chunk.js.map",
     "runtime-main.js": "/trietcv/static/js/runtime-main.a0b040ef.js",
     "runtime-main.js.map": "/trietcv/static/js/runtime-main.a0b040ef.js.map",
     "static/css/2.c75fc037.chunk.css": "/trietcv/static/css/2.c75fc037.chunk.css",
-    "static/js/2.1e29e69b.chunk.js": "/trietcv/static/js/2.1e29e69b.chunk.js",
-    "static/js/2.1e29e69b.chunk.js.map": "/trietcv/static/js/2.1e29e69b.chunk.js.map",
+    "static/js/2.137fed84.chunk.js": "/trietcv/static/js/2.137fed84.chunk.js",
+    "static/js/2.137fed84.chunk.js.map": "/trietcv/static/js/2.137fed84.chunk.js.map",
     "index.html": "/trietcv/index.html",
     "static/css/2.c75fc037.chunk.css.map": "/trietcv/static/css/2.c75fc037.chunk.css.map",
-    "static/css/main.b310eb89.chunk.css.map": "/trietcv/static/css/main.b310eb89.chunk.css.map",
-    "static/js/2.1e29e69b.chunk.js.LICENSE.txt": "/trietcv/static/js/2.1e29e69b.chunk.js.LICENSE.txt",
+    "static/css/main.d1a32a67.chunk.css.map": "/trietcv/static/css/main.d1a32a67.chunk.css.map",
+    "static/js/2.137fed84.chunk.js.LICENSE.txt": "/trietcv/static/js/2.137fed84.chunk.js.LICENSE.txt",
+    "static/media/aceStoreIc.ef10e0ab.svg": "/trietcv/static/media/aceStoreIc.ef10e0ab.svg",
     "static/media/bcca-1.058c56c7.jpg": "/trietcv/static/media/bcca-1.058c56c7.jpg",
     "static/media/bcca-2.2456e70c.jpg": "/trietcv/static/media/bcca-2.2456e70c.jpg",
     "static/media/bcca-3.1d17381b.jpg": "/trietcv/static/media/bcca-3.1d17381b.jpg",
@@ -65,6 +66,7 @@
     "static/media/sign-in.c4ad4e30.jpg": "/trietcv/static/media/sign-in.c4ad4e30.jpg",
     "static/media/soccer.a5621dcc.svg": "/trietcv/static/media/soccer.a5621dcc.svg",
     "static/media/sourcetree.a782f129.svg": "/trietcv/static/media/sourcetree.a782f129.svg",
+    "static/media/triet-cv.75c4cc32.pdf": "/trietcv/static/media/triet-cv.75c4cc32.pdf",
     "static/media/vs.04315a89.svg": "/trietcv/static/media/vs.04315a89.svg",
     "static/media/workside.dd71c7b0.svg": "/trietcv/static/media/workside.dd71c7b0.svg",
     "static/media/writing.0ce167e0.svg": "/trietcv/static/media/writing.0ce167e0.svg"
@@ -72,8 +74,8 @@
   "entrypoints": [
     "static/js/runtime-main.a0b040ef.js",
     "static/css/2.c75fc037.chunk.css",
-    "static/js/2.1e29e69b.chunk.js",
-    "static/css/main.b310eb89.chunk.css",
-    "static/js/main.f80f700a.chunk.js"
+    "static/js/2.137fed84.chunk.js",
+    "static/css/main.d1a32a67.chunk.css",
+    "static/js/main.67a406a1.chunk.js"
   ]
 }
