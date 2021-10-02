@@ -1,7 +1,7 @@
 // import classnames from 'classnames';
 import {
   ArrowRightOutlined,
-  EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined,DownloadOutlined
+  EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined, DownloadOutlined
 } from '@ant-design/icons';
 import { Button } from 'antd';
 import fileDownload from 'js-file-download';
@@ -66,12 +66,12 @@ const GENERAL_INFO = [
     icon: <PhoneOutlined />,
     title: '(+84) 819 541 897',
   },
-  // {
-  //   icon: <GlobalOutlined />,
-  //   title: 'Website',
-  //   type: 'LINK',
-  //   link: 'https://aceknight97.github.io/staticpromotionalwebsite',
-  // },
+  {
+    icon: <GlobalOutlined />,
+    title: 'Cover letter',
+    type: 'LINK',
+    link: 'https://docs.google.com/document/d/1a9HtgPif980QKMZ1JJcqLew-G0wQ9vl-4cIF00RRV0E/edit?usp=sharing',
+  },
   {
     icon: <EnvironmentOutlined />,
     title: 'District 7, Hochiminh city',
@@ -158,11 +158,11 @@ const CVInformation = (props) => {
   const hobbiesArr = (arr = []) => _.map(arr, (x, i) => (
     <div key={i} className='my-cv-hobbies'>
       {x.icon && (
-      <img
-        src={x.icon}
-        alt='Hobbies icon'
-        className='my-cv-hobbies-icon'
-      />
+        <img
+          src={x.icon}
+          alt='Hobbies icon'
+          className='my-cv-hobbies-icon'
+        />
       )}
       <div className='my-cv-hobbies-title'>
         <span>{x.title}</span>
@@ -204,18 +204,16 @@ const CVInformation = (props) => {
 </a> */}
 
       <a href={trietCVPDF} target="_blank" rel="noopener noreferrer" download>
-      <Button
-        block
-        className='cv-info-more-inf-btn'
-        type='ghost'
-        icon={<DownloadOutlined />}
-      >
-        Download CV
-      </Button>
+        <Button
+          block
+          className='cv-info-more-inf-btn'
+          type='ghost'
+          icon={<DownloadOutlined />}
+        >
+          Download CV
+        </Button>
       </a>
-      
-      
-      
+
       <Button
         block
         type='ghost'
@@ -230,10 +228,10 @@ const CVInformation = (props) => {
 };
 
 CVInformation.defaultProps = {
-  onClickDetailCV:()=>{}
+  onClickDetailCV: () => { }
 };
 CVInformation.propTypes = {
-  onClickDetailCV:PropTypes.func,
+  onClickDetailCV: PropTypes.func,
 };
 
 export default CVInformation;
