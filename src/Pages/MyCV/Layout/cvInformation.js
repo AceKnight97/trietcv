@@ -203,7 +203,7 @@ const CVInformation = (props) => {
    </Button>
 </a> */}
 
-      <a href={trietCVPDF} target="_blank" rel="noopener noreferrer" download>
+      <a href={trietCVPDF} target="_blank" rel="noopener noreferrer" download className='under-none'>
         <Button
           block
           className='cv-info-more-inf-btn'
@@ -223,6 +223,18 @@ const CVInformation = (props) => {
         More information
         <ArrowRightOutlined />
       </Button>
+
+      <a href='https://drive.google.com/drive/folders/1KZrjmMOqL3ueAmbPtwpWLVo5zEU9QLcS?usp=sharing' target=' '
+        className='under-none' >
+        <Button
+          block
+          type='ghost'
+          className='cv-info-more-inf-btn'
+        >
+          Photos of me and my friends
+        </Button>
+      </a>
+
     </div>
   );
 };
