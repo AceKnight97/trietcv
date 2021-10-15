@@ -18,7 +18,7 @@ import soccerIc from '../../../Images/Pages/CVs/soccer.svg';
 import writtingIc from '../../../Images/Pages/CVs/writing.svg';
 import InfoRow from './infoRow';
 import PropTypes from 'prop-types';
-import trietCVPDF from '../../../Assets/triet-cv.pdf';
+import trietCVPDF from '../../../Assets/triet-cv-2.pdf';
 import mime from 'mime-types';
 
 const HOBBIES_ARR1 = [
@@ -91,7 +91,7 @@ const CVInformation = (props) => {
           <span>Triet</span>
         </div>
         <div className='my-cv-role'>
-          <span>Web-App developer</span>
+          <span>Front-end developer</span>
         </div>
       </div>
     </div>

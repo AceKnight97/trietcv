@@ -71,10 +71,10 @@ export const SKILLS_DATA = [
     icon: js,
     title: 'JavaScript',
   },
-  {
-    icon: npm,
-    title: 'Npm',
-  },
+  // {
+  //   icon: npm,
+  //   title: 'Npm',
+  // },
   {
     icon: css3,
     title: 'CSS3',
@@ -98,10 +98,10 @@ export const OTHER_SKILLS_DATA = [
     icon: figma,
     title: 'Figma',
   },
-  {
-    icon: python,
-    title: 'Python',
-  },
+  // {
+  //   icon: python,
+  //   title: 'Python',
+  // },
   {
     icon: graphql,
     title: 'Graphql',
