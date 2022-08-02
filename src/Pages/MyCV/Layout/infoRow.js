@@ -1,8 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import _ from 'lodash';
-import { Button } from 'antd';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const InfoRow = (props) => {
   const {

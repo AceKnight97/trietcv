@@ -1,18 +1,16 @@
-import react from '../Images/Pages/CVs/react.svg';
+import css3 from '../Images/Pages/CVs/css3.svg';
 import figma from '../Images/Pages/CVs/figma.svg';
+import graphql from '../Images/Pages/CVs/graphql.svg';
+import html from '../Images/Pages/CVs/html.svg';
 import js from '../Images/Pages/CVs/js.svg';
-import npm from '../Images/Pages/CVs/npm.svg';
-import python from '../Images/Pages/CVs/python.svg';
+import react from '../Images/Pages/CVs/react.svg';
 import sourcetree from '../Images/Pages/CVs/sourcetree.svg';
 import vs from '../Images/Pages/CVs/vs.svg';
-import css3 from '../Images/Pages/CVs/css3.svg';
-import html from '../Images/Pages/CVs/html.svg';
-import graphql from '../Images/Pages/CVs/graphql.svg';
 
-import cardiac from '../Images/Pages/CVs/cardiac.svg';
-import nano from '../Images/Pages/CVs/nano.png';
-import mdm from '../Images/Pages/CVs/mdm.svg';
 import biocare from '../Images/Pages/CVs/biocare.svg';
+import cardiac from '../Images/Pages/CVs/cardiac.svg';
+import mdm from '../Images/Pages/CVs/mdm.svg';
+import nano from '../Images/Pages/CVs/nano.png';
 import workside from '../Images/Pages/CVs/workside.svg';
 
 export const SOCICAL_DATA = [

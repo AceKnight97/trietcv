@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import _ from 'lodash';
 import { Button } from 'antd';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const TeamProduct = (props) => {
   const {
@@ -12,7 +11,7 @@ const TeamProduct = (props) => {
   const { icon, name, link } = data;
 
   return (
-    <div className='team-product-wrapper'>
+    <div className={classnames('team-product-wrapper', className)}>
       <div className='team-product-logo'>
         <img
           src={icon}

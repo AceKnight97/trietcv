@@ -1,16 +1,14 @@
 import React from 'react';
-import { Button } from 'antd';
-import { useHistory } from 'react-router-dom';
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 import { useMergeState } from '../../Helpers/customHooks';
 
-import CVInformation from './Layout/cvInformation';
-import CVDetails from './Layout/cvDetails';
-import Portfolio from './Portfolio';
 import { PAGE_MANAGER } from '../../Constants';
+import CVDetails from './Layout/cvDetails';
+import CVInformation from './Layout/cvInformation';
+import Portfolio from './Portfolio';
 
 const MyCV = () => {
-  const history = useHistory();
+  const navigate  = useNavigate();
   const [state, setState] = useMergeState({
     isShowDetails: false,
   });
@@ -22,8 +20,9 @@ const MyCV = () => {
       setState({ isShowDetails: false });
       return;
     }
-    history.push(PAGE_MANAGER.HOME);
+    // history.push(PAGE_MANAGER.HOME);
     // history.goBack();
+    navigate(PAGE_MANAGER.HOME)
   };
 
   const onClickDetailCV = () => {

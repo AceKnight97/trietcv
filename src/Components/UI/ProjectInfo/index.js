@@ -1,47 +1,47 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
-import classnames from 'classnames';
-import _ from 'lodash';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { Button } from "antd";
+import classnames from "classnames";
+import _ from "lodash";
+import PropTypes from "prop-types";
+import React from "react";
 
 const ProjectInfo = (props) => {
-  const {
-    data, isShowDetails, toggleClick, className,
-  } = props;
-  const {
-    icon, title, rows, iconClassName,
-  } = data;
+  const { data, isShowDetails, toggleClick, className } = props || {};
+  const { icon, title, rows, iconClassName } = data;
 
   const renderLeft = () => (
-    <div className='project-info-left'>
-      <img src={icon} className={classnames('project-info-left-logo', iconClassName)} alt=' ' />
+    <div className="project-info-left">
+      <img
+        src={icon}
+        className={classnames("project-info-left-logo", iconClassName)}
+        alt=" as"
+      />
 
-      <div className='project-info-left-title'>
+      <div className="project-info-left-title">
         <span>{title}</span>
       </div>
     </div>
   );
 
   const renderItem = (item = {}) => {
-    const {
-      title, value, type, children, link,
-    } = item;
+    const { title, value, type, children, link } = item;
     // console.log({title, value, type, children, link,})
     switch (type) {
-      case 'LINK':
+      case "LINK":
         return (
           <>
-            <span>{`${title || ''} `}</span>
-            <a href={link} target=' ' className=''>{value}</a>
+            <span>{`${title || ""} `}</span>
+            <a href={link} target=" " className="">
+              {value}
+            </a>
           </>
         );
-      case 'CUSTOM':
+      case "CUSTOM":
         return children();
       default:
         return (
           <>
-            <span>{`${title || ''} ${value || ''}`}</span>
+            <span>{`${title || ""} ${value || ""}`}</span>
           </>
         );
     }
@@ -55,40 +55,45 @@ const ProjectInfo = (props) => {
     const leftItem = rowArray[0];
     if (rowArray.length === 1) {
       return (
-        <div className='project-info-right-row'>
-          {renderItem(leftItem)}
-        </div>
+        <div className="project-info-right-row">{renderItem(leftItem)}</div>
       );
     }
     const rightItem = rowArray[1];
-
+    const unit =Math.floor(Math.random() * 99999999);
+console.log({unit})
     return (
-      <div className='project-info-right-row' key={index}>
-        <div className='project-info-right-row-item'>
-        {renderItem(leftItem)}
-      </div>
-        <div className='project-info-right-row-item'>
-        {renderItem(rightItem)}
-      </div>
+      <div className="project-info-right-row" key={unit}>
+        <div className="project-info-right-row-item">
+          {renderItem(leftItem)}
+        </div>
+        <div className="project-info-right-row-item">
+          {renderItem(rightItem)}
+        </div>
       </div>
     );
   };
 
   const renderRight = () => (
-    <div className='project-info-right'>
+    <div className="project-info-right">
       {_.map(rows || [], (x, index) => renderRow(x, index))}
     </div>
   );
 
   return (
-    <div className={classnames('project-info', isShowDetails ? 'project-info-hover' : '', className)}>
+    <div
+      className={classnames(
+        "project-info",
+        isShowDetails ? "project-info-hover" : "",
+        className
+      )}
+    >
       {renderLeft()}
 
       {renderRight()}
 
       <Button
-        type='ghost'
-        className='project-info-toggle-btn'
+        type="ghost"
+        className="project-info-toggle-btn"
         onClick={toggleClick}
       >
         {isShowDetails ? <ArrowLeftOutlined /> : <ArrowRightOutlined />}
@@ -98,16 +103,16 @@ const ProjectInfo = (props) => {
 };
 
 ProjectInfo.defaultProps = {
-  className: '',
+  className: "",
   data: {
     icon: undefined,
-    title: '',
-    downloadLink: '',
-    guideLink: '',
-    releaseDate: '',
-    description: '',
+    title: "",
+    downloadLink: "",
+    guideLink: "",
+    releaseDate: "",
+    description: "",
     rows: [],
-    iconClassName: '',
+    iconClassName: "",
   },
   toggleClick: () => {},
   isShowDetails: false,

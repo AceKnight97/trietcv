@@ -1,27 +1,32 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
-import Modal from 'antd/lib/modal/Modal';
-import ProjectInfo from '../../../Components/UI/ProjectInfo';
-import { useMergeState } from '../../../Helpers/customHooks';
-import { SAVE_MONEY_APP, BIOACRE_CARDIAC, NANO_DASHBOARD, ACE_STORE_DATA } from './data';
-import cloverIc from '../../../Images/Pages/CVs/clover.svg';
-import { Button } from 'antd';
-import { ArrowLeftOutlined } from '@ant-design/icons';
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import PropTypes from "prop-types";
+import _ from "lodash";
+import Modal from "antd/lib/modal/Modal";
+import ProjectInfo from "../../../Components/UI/ProjectInfo";
+import { useMergeState } from "../../../Helpers/customHooks";
+import {
+  SAVE_MONEY_APP,
+  BIOACRE_CARDIAC,
+  NANO_DASHBOARD,
+  ACE_STORE_DATA,
+} from "./data";
+import cloverIc from "../../../Images/Pages/CVs/clover.svg";
+import { Button } from "antd";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 const PROJECT_DATA = {
-  SMA: 'SMA',
-  BCCA: 'BCCA',
-  NANO: 'NANO',
-  ACE_STORE_: 'ACE_STORE',
+  SMA: "SMA",
+  BCCA: "BCCA",
+  NANO: "NANO",
+  ACE_STORE_: "ACE_STORE",
 };
 const { SMA, BCCA, NANO, ACE_STORE } = PROJECT_DATA;
 
 const Portfolio = (props) => {
   const [state, setState] = useMergeState({
-    current: '',
-    previewImg: undefined,
+    current: "",
+    previewImg: null,
   });
 
   const onClickPreview = (previewImg) => {
@@ -34,20 +39,20 @@ const Portfolio = (props) => {
   const { current, previewImg } = state;
 
   const toggleClickSMA = () => {
-    setState({ current: current === SMA ? '' : SMA });
+    setState({ current: current === SMA ? "" : SMA });
   };
   const toggleClickBCCA = () => {
-    setState({ current: current === BCCA ? '' : BCCA });
+    setState({ current: current === BCCA ? "" : BCCA });
   };
   const toggleClickNaNo = () => {
-    setState({ current: current === NANO ? '' : NANO });
+    setState({ current: current === NANO ? "" : NANO });
   };
   const toggleClickAceStore = () => {
-    setState({ current: current === ACE_STORE ? '' : ACE_STORE });
+    setState({ current: current === ACE_STORE ? "" : ACE_STORE });
   };
 
   const renderHeader = () => (
-    <div className='portfolio-header'>
+    <div className="portfolio-header">
       <span>Truong Thanh Triet</span>
     </div>
   );
@@ -69,76 +74,71 @@ const Portfolio = (props) => {
     }
     return images.length !== 0 ? (
       <Carousel>
-        {
-        _.map(images, (x, i) => (
+        {_.map(images, (x, i) => (
           <button
             key={i}
-            className='bas-0-btn'
+            className="bas-0-btn"
             onClick={() => {
               onClickPreview(x);
             }}
           >
             <img src={x} alt={`img ${i}`} />
           </button>
-        ))
-            }
+        ))}
       </Carousel>
     ) : (
-      <div className='hello-visitor'>
+      <div className="hello-visitor">
         <span>Hello visitor,</span>
-        <img src={cloverIc} alt='Clover ic' />
+        <img src={cloverIc} alt="Clover ic" />
         <span>Have a good day!</span>
       </div>
     );
   };
 
   const renderBody = () => (
-    <div className='portfolio-body'>
-
-      <div className='portfolio-body-left'>
+    <div className="portfolio-body">
+      <div className="portfolio-body-left">
         <ProjectInfo
           data={SAVE_MONEY_APP}
           toggleClick={toggleClickSMA}
           isShowDetails={current === SMA}
         />
         <ProjectInfo
-          className='mt-24'
+          className="mt-24"
           data={BIOACRE_CARDIAC}
           toggleClick={toggleClickBCCA}
           isShowDetails={current === BCCA}
         />
         <ProjectInfo
-          className='mt-24'
+          className="mt-24"
           data={NANO_DASHBOARD}
           toggleClick={toggleClickNaNo}
           isShowDetails={current === NANO}
         />
         <ProjectInfo
-          className='mt-24'
+          className="mt-24"
           data={ACE_STORE_DATA}
           toggleClick={toggleClickAceStore}
           isShowDetails={current === ACE_STORE}
         />
-      <Button
-        block
-          type='ghost'
-          className='portfolio-body-left-back-btn'
+        <Button
+          block
+          type="ghost"
+          className="portfolio-body-left-back-btn"
           onClick={props.onClickBack}
-      >
-        <ArrowLeftOutlined />
-        Back
-      </Button>
+        >
+          <ArrowLeftOutlined />
+          Back
+        </Button>
       </div>
 
-      <div className='portfolio-body-right'>
-        {renderCarousel()}
-      </div>
+      <div className="portfolio-body-right">{renderCarousel()}</div>
     </div>
   );
 
   return (
     <>
-      <div className='portfolio'>
+      <div className="portfolio">
         {renderHeader()}
 
         {renderBody()}
@@ -148,16 +148,16 @@ const Portfolio = (props) => {
         onCancel={onClickClosePreview}
         centered
         footer={null}
-        className='profolio-modal'
+        className="profolio-modal"
       >
-        <img src={previewImg} alt='img preview' />
+        <img src={previewImg} alt="img preview" />
       </Modal>
     </>
   );
 };
 
 Portfolio.defaultProps = {
-  onClickBack: ()=>{},
+  onClickBack: () => {},
 };
 Portfolio.propTypes = {
   onClickBack: PropTypes.func,

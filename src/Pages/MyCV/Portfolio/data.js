@@ -1,15 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../../Images/Pages/Home/logo.svg';
 import cardiac from '../../../Images/Pages/CVs/cardiac.svg';
-import { PAGE_MANAGER } from '../../../Constants';
 import detailsImg from '../../../Images/Pages/CVs/SMA/details.jpg';
 import doneImg from '../../../Images/Pages/CVs/SMA/done.jpg';
 import insightImg from '../../../Images/Pages/CVs/SMA/insight.jpg';
 import journalImg from '../../../Images/Pages/CVs/SMA/journal.jpg';
 import messageImg from '../../../Images/Pages/CVs/SMA/message.jpg';
-import signInImg from '../../../Images/Pages/CVs/SMA/sign-in.jpg';
 import profileImg from '../../../Images/Pages/CVs/SMA/profile.jpg';
+import signInImg from '../../../Images/Pages/CVs/SMA/sign-in.jpg';
+import logo from '../../../Images/Pages/Home/logo.svg';
 
 import bccaIc1 from '../../../Images/Pages/CVs/BCCA/bcca-1.jpg';
 import bccaIc2 from '../../../Images/Pages/CVs/BCCA/bcca-2.jpg';
@@ -24,6 +21,12 @@ import bccaIc9 from '../../../Images/Pages/CVs/BCCA/bcca-9.jpg';
 import nanoIc from '../../../Images/Pages/CVs/nano.png';
 
 import nano1 from '../../../Images/Pages/CVs/NANO/nano-1.jpg';
+import nano10 from '../../../Images/Pages/CVs/NANO/nano-10.jpg';
+import nano11 from '../../../Images/Pages/CVs/NANO/nano-11.jpg';
+import nano12 from '../../../Images/Pages/CVs/NANO/nano-12.jpg';
+import nano13 from '../../../Images/Pages/CVs/NANO/nano-13.jpg';
+import nano14 from '../../../Images/Pages/CVs/NANO/nano-14.jpg';
+import nano15 from '../../../Images/Pages/CVs/NANO/nano-15.jpg';
 import nano2 from '../../../Images/Pages/CVs/NANO/nano-2.jpg';
 import nano3 from '../../../Images/Pages/CVs/NANO/nano-3.jpg';
 import nano4 from '../../../Images/Pages/CVs/NANO/nano-4.jpg';
@@ -32,12 +35,6 @@ import nano6 from '../../../Images/Pages/CVs/NANO/nano-6.jpg';
 import nano7 from '../../../Images/Pages/CVs/NANO/nano-7.jpg';
 import nano8 from '../../../Images/Pages/CVs/NANO/nano-8.jpg';
 import nano9 from '../../../Images/Pages/CVs/NANO/nano-9.jpg';
-import nano10 from '../../../Images/Pages/CVs/NANO/nano-10.jpg';
-import nano11 from '../../../Images/Pages/CVs/NANO/nano-11.jpg';
-import nano12 from '../../../Images/Pages/CVs/NANO/nano-12.jpg';
-import nano13 from '../../../Images/Pages/CVs/NANO/nano-13.jpg';
-import nano14 from '../../../Images/Pages/CVs/NANO/nano-14.jpg';
-import nano15 from '../../../Images/Pages/CVs/NANO/nano-15.jpg';
 
 import aceStoreIc from '../../../Images/Pages/CVs/aceStoreIc.svg';
 
@@ -194,13 +191,13 @@ export const ACE_STORE_DATA = {
   images: NANO_IMAGES,
 };
 
-const temp = `This web portal is the longest project I've ever done and still doing it now. I also coded the first line of the project. 
-        It helps clinics to management their patients including their profiles, appointments, health care programs and reports.
-        Each patient may have multiple health care programs which contains the patient basic informartion such as: first name, last name, email, address,... 
-        and history and current of their sickness information in order to clinic nurse and physician to take care of them. 
-        Clinic nurse uses the web portal to record the patient test result an clinic physicician gives medication prescription base on records.
-        The patient and clinic users can also have virtual or in-person appointment by booking appointment on the web portal. 
-        In the virual appointment, they have video call supported as a feature of the web portal. In-person appointment, patients go to the nearest clinic that was registered.
-        Biocare cardiac has three kinds of report: Notification, Monthly and End Of Use Report. Notification report is generated when notification setting is triggered.
-        For example: patient has not taken medication for 2 days or gotten low blood presure for 3 days consectively.
-`;
+// const temp = `This web portal is the longest project I've ever done and still doing it now. I also coded the first line of the project. 
+//         It helps clinics to management their patients including their profiles, appointments, health care programs and reports.
+//         Each patient may have multiple health care programs which contains the patient basic informartion such as: first name, last name, email, address,... 
+//         and history and current of their sickness information in order to clinic nurse and physician to take care of them. 
+//         Clinic nurse uses the web portal to record the patient test result an clinic physicician gives medication prescription base on records.
+//         The patient and clinic users can also have virtual or in-person appointment by booking appointment on the web portal. 
+//         In the virual appointment, they have video call supported as a feature of the web portal. In-person appointment, patients go to the nearest clinic that was registered.
+//         Biocare cardiac has three kinds of report: Notification, Monthly and End Of Use Report. Notification report is generated when notification setting is triggered.
+//         For example: patient has not taken medication for 2 days or gotten low blood presure for 3 days consectively.
+// `;

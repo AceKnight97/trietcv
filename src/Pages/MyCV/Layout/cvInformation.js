@@ -4,7 +4,6 @@ import {
   EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined, DownloadOutlined
 } from '@ant-design/icons';
 import { Button } from 'antd';
-import fileDownload from 'js-file-download';
 import _ from 'lodash';
 import React from 'react';
 import { INDUSTRY_KNOWLEDGE_DATA, LANGUAGE_DATA, SOCICAL_DATA } from '../../../Constants/cvInfo';
@@ -19,7 +18,6 @@ import writtingIc from '../../../Images/Pages/CVs/writing.svg';
 import InfoRow from './infoRow';
 import PropTypes from 'prop-types';
 import trietCVPDF from '../../../Assets/triet-cv-2.pdf';
-import mime from 'mime-types';
 
 const HOBBIES_ARR1 = [
   {

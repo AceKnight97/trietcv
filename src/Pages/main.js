@@ -1,33 +1,28 @@
-import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import React, { useEffect } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import {
-  BrowserRouter as Router, Redirect, Route, Switch,
-} from 'react-router-dom';
-import { PAGE_MANAGER } from '../Constants';
-import reloadPageRequest from '../Redux/Actions/reload';
-import MyCV from './MyCV';
-import Home from './Home';
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import MyCV from "./MyCV";
 
 const Main = (props) => {
   useEffect(() => {
     window.onbeforeunload = () => {};
     window.onload = () => {
-      props.reloadPageRequest();
+      // props.reloadPageRequest();
     };
-    // window.onload = () => {
-    //   props.reloadPageRequest();
-    // };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
-    <main className='div-root'>
+    <main className="div-root">
       <Router>
-        <Switch>
-          <Route path='/trietcv' name='My CV' component={MyCV} />
-          {/* <Route path='/acestore' name='Home' component={Home} /> */}
-          <Redirect path='/' to={{ pathname: '/trietcv' }} />
-        </Switch>
+        <Routes>
+          <Route path="/trietcv" name="My CV" element={<MyCV />} />
+          <Route path="/" element={<Navigate replace to="/trietcv" />} />
+        </Routes>
       </Router>
     </main>
   );
@@ -35,16 +30,6 @@ const Main = (props) => {
 
 Main.defaultProps = {};
 
-Main.propTypes = {
-  reloadPageRequest: PropTypes.func.isRequired,
-};
+Main.propTypes = {};
 
-const mapStateToProps = (state) => ({
-  isLoading: state.isLoading,
-});
-
-const mapDispatchToProps = {
-  reloadPageRequest,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default Main;
