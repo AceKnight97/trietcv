@@ -14,7 +14,7 @@ const ProjectInfo = (props) => {
       <img
         src={icon}
         className={classnames("project-info-left-logo", iconClassName)}
-        alt=" as"
+        alt="Left icon"
       />
 
       <div className="project-info-left-title">
@@ -31,7 +31,7 @@ const ProjectInfo = (props) => {
         return (
           <>
             <span>{`${title || ""} `}</span>
-            <a href={link} target=" " className="">
+            <a href={link} target=" ">
               {value}
             </a>
           </>
@@ -55,14 +55,14 @@ const ProjectInfo = (props) => {
     const leftItem = rowArray[0];
     if (rowArray.length === 1) {
       return (
-        <div className="project-info-right-row">{renderItem(leftItem)}</div>
+        <div className="project-info-right-row" key={index}>
+          {renderItem(leftItem)}
+        </div>
       );
     }
     const rightItem = rowArray[1];
-    const unit =Math.floor(Math.random() * 99999999);
-console.log({unit})
     return (
-      <div className="project-info-right-row" key={unit}>
+      <div className="project-info-right-row" key={index}>
         <div className="project-info-right-row-item">
           {renderItem(leftItem)}
         </div>
