@@ -6,6 +6,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Home from "./Home";
 import MyCV from "./MyCV";
 
 const Main = (props) => {
@@ -21,6 +22,7 @@ const Main = (props) => {
       <Router>
         <Routes>
           <Route path="/trietcv" name="My CV" element={<MyCV />} />
+          <Route path="/home" name="My CV" element={<Home />} />
           <Route path="/" element={<Navigate replace to="/trietcv" />} />
         </Routes>
       </Router>
