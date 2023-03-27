@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import _ from 'lodash';
 import { Checkbox } from 'antd';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import InputTitle from './inputTitle';
 
 const MultipleCheckbox = (props) => {
@@ -21,7 +20,7 @@ const MultipleCheckbox = (props) => {
 
       <InputTitle title={title} className={classnames('checkbox-ct-title', titleClassName)} />
 
-      {_.map(data, (x, i) => (
+      {data.map((x, i) => (
         <div key={i} className={classnames('multiple-checkbox-main', rowClassName)}>
           <div className="multiple-checkbox-value">
             <Checkbox
@@ -56,7 +55,7 @@ MultipleCheckbox.defaultProps = {
   rowClassName: '',
   title: '',
   data: [],
-  onChange: () => {},
+  onChange: () => { },
   suffix: '',
   isBoldValue: false,
   disabled: false,

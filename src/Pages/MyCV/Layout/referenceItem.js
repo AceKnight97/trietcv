@@ -1,8 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import _ from 'lodash';
-import { } from 'antd';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const ReferenceItem = (props) => {
   const { className, referenceData } = props;

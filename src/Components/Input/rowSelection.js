@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 
 const RowSelection = (props) => {
@@ -22,7 +21,7 @@ const RowSelection = (props) => {
       </div>
 
       {disabled
-        ? _.map(data, (x, i) => (
+        ? data.map((x, i) => (
           <div
             key={i}
             className={classnames('row-selection-item', value === x ? 'selected-item' : '')}
@@ -30,7 +29,7 @@ const RowSelection = (props) => {
             <span>{`${i + 1}. ${x}`}</span>
           </div>
         ))
-        : _.map(data, (x, i) => (
+        : data.map((x, i) => (
           <button
             key={i}
             onClick={() => onChange(x)}

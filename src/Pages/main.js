@@ -23,7 +23,7 @@ const Main = (props) => {
         <Routes>
           <Route path="/trietcv" name="My CV" element={<MyCV />} />
           <Route path="/home" name="My CV" element={<Home />} />
-          <Route path="/" element={<Navigate replace to="/trietcv" />} />
+          <Route path="/" element={<Navigate replace to="/home" />} />
         </Routes>
       </Router>
     </main>

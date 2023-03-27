@@ -1,7 +1,6 @@
-import _ from 'lodash';
 import React from 'react';
 import {
-  EDUCATION_DATA, EXPERIENCE_DATA, OTHER_SKILLS_DATA, SKILLS_DATA, TEAM_PRODUCTS,
+  EDUCATION_DATA, EXPERIENCE_DATA, OTHER_SKILLS_DATA, SKILLS_DATA, TEAM_PRODUCTS
 } from '../../../Constants/cvInfo';
 import BodyTopic from './bodyTopic';
 import CVExp from './cvExp';
@@ -12,7 +11,7 @@ const CVDetails = () => {
     <>
       <BodyTopic title='Experience' />
 
-      {_.map(EXPERIENCE_DATA, (x, i) => (
+      {(EXPERIENCE_DATA || []).map((x, i) => (
         <CVExp key={i} data={x} />
       ))}
 
@@ -29,7 +28,7 @@ const CVDetails = () => {
 
   const showSkillsIcon = (data = []) => (
     <div className='my-skills-wrapper'>
-      {_.map(data, (x, i) => (
+      {data.map((x, i) => (
         <div key={i} className='my-skills-item'>
           <div className='my-skills-div'>
             <img
@@ -74,7 +73,7 @@ const CVDetails = () => {
       />
 
       {
-        _.map(TEAM_PRODUCTS, (x, i) => (
+        TEAM_PRODUCTS.map((x, i) => (
           <TeamProduct key={i} data={x} />
         ))
       }

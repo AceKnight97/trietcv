@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import _ from 'lodash';
 import { Radio } from 'antd';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import InputTitle from './inputTitle';
 
 const RadioCT = (props) => {
@@ -42,7 +41,7 @@ const RadioCT = (props) => {
         onChange={e => onChange(name, e.target.value)}
         value={value}
       >
-        {_.map(data, (x, i) => (
+        {data.map((x, i) => (
           <div key={i} className={classnames('radio-item', radioItemClassName)}>
             <Radio
               value={x}
@@ -67,7 +66,7 @@ RadioCT.defaultProps = {
   textClass: '',
   titleClassName: '',
   radioItemClassName: '',
-  onChange: () => {},
+  onChange: () => { },
   data: [],
   // itemMagrinTop: 'mt18',
   type: 'SCORE',

@@ -1,14 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 // import classnames from 'classnames';
-import _ from 'lodash';
 import { } from 'antd';
 
 const CVExp = (props) => {
   const { className, data } = props;
   const {
     name, position, duration, content,
-  } = data;
+  } = data || {};
   return (
     <div className={className}>
       {name && (
@@ -29,8 +28,8 @@ const CVExp = (props) => {
         </div>
       )}
 
-      {content?.length !== 0 && (
-        _.map(content, (x, i) => (
+      {content && content?.length !== 0 && (
+        content.map((x, i) => (
           <div key={i} className='cv-exp-content'>
             <span>{x}</span>
           </div>

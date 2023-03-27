@@ -1,7 +1,6 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import classnames from "classnames";
-import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -75,7 +74,7 @@ const ProjectInfo = (props) => {
 
   const renderRight = () => (
     <div className="project-info-right">
-      {_.map(rows || [], (x, index) => renderRow(x, index))}
+      {(rows || []).map((x, index) => renderRow(x, index))}
     </div>
   );
 
@@ -114,7 +113,7 @@ ProjectInfo.defaultProps = {
     rows: [],
     iconClassName: "",
   },
-  toggleClick: () => {},
+  toggleClick: () => { },
   isShowDetails: false,
 };
 ProjectInfo.propTypes = {

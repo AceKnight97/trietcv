@@ -18,10 +18,10 @@ export const SOCICAL_DATA = [
     title: 'Facebook',
     value: 'https://www.facebook.com/profile.php?id=100015087697713',
   },
-  // {
-  //   title: 'LinkedIn',
-  //   value: 'https://www.linkedin.com/in/tri%E1%BA%BFt-tr%C6%B0%C6%A1ng-thanh-89a92b161/',
-  // },
+  {
+    title: 'LinkedIn',
+    value: 'https://www.linkedin.com/in/tri%E1%BA%BFt-tr%C6%B0%C6%A1ng-thanh-89a92b161/',
+  },
 ];
 export const INDUSTRY_KNOWLEDGE_DATA = [
   'Web-App Development',

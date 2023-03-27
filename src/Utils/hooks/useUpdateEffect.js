@@ -1,5 +1,4 @@
-import { useRef, useEffect } from 'react';
-import _ from 'lodash';
+import { useEffect, useRef } from 'react';
 
 export default function useUpdateEffect(effect, dependencies = [], cleanup) {
   const isInitialMount = useRef(true);

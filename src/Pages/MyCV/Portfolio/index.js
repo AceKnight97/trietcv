@@ -1,19 +1,16 @@
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import { Button } from "antd";
+import Modal from "antd/lib/modal/Modal";
+import PropTypes from "prop-types";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import PropTypes from "prop-types";
-import _ from "lodash";
-import Modal from "antd/lib/modal/Modal";
 import ProjectInfo from "../../../Components/UI/ProjectInfo";
 import { useMergeState } from "../../../Helpers/customHooks";
-import {
-  SAVE_MONEY_APP,
-  BIOACRE_CARDIAC,
-  NANO_DASHBOARD,
-  ACE_STORE_DATA,
-} from "./data";
 import cloverIc from "../../../Images/Pages/CVs/clover.svg";
-import { Button } from "antd";
-import { ArrowLeftOutlined } from "@ant-design/icons";
+import {
+  ACE_STORE_DATA, BIOACRE_CARDIAC,
+  NANO_DASHBOARD, SAVE_MONEY_APP
+} from "./data";
 
 const PROJECT_DATA = {
   SMA: "SMA",
@@ -74,7 +71,7 @@ const Portfolio = (props) => {
     }
     return images.length !== 0 ? (
       <Carousel>
-        {_.map(images, (x, i) => (
+        {images.map((x, i) => (
           <button
             key={i}
             className="bas-0-btn"

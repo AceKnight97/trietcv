@@ -4,7 +4,6 @@ import {
   EnvironmentOutlined, GlobalOutlined, MailOutlined, PhoneOutlined, DownloadOutlined
 } from '@ant-design/icons';
 import { Button } from 'antd';
-import _ from 'lodash';
 import React from 'react';
 import { INDUSTRY_KNOWLEDGE_DATA, LANGUAGE_DATA, SOCICAL_DATA } from '../../../Constants/cvInfo';
 import blenderIc from '../../../Images/Pages/CVs/blender.svg';
@@ -72,7 +71,7 @@ const GENERAL_INFO = [
   },
   {
     icon: <EnvironmentOutlined />,
-    title: 'District 7, Hochiminh city',
+    title: 'District Tan Binh, Hochiminh city',
   },
 ];
 
@@ -96,7 +95,7 @@ const CVInformation = (props) => {
   );
 
   const showGeneralInfo = () => (
-    _.map(GENERAL_INFO, (x, i) => (
+    GENERAL_INFO.map((x, i) => (
       <InfoRow
         className={i === 0 ? 'mt24' : 'mt16'}
         key={i}
@@ -114,7 +113,7 @@ const CVInformation = (props) => {
         <span>Industry Knowledge</span>
       </div>
 
-      {_.map(INDUSTRY_KNOWLEDGE_DATA, (x, i) => (
+      {INDUSTRY_KNOWLEDGE_DATA.map((x, i) => (
         <div key={i} className='my-cv-body-content'>
           <span className='a-dot'>●</span>
           <span>{x}</span>
@@ -129,7 +128,7 @@ const CVInformation = (props) => {
         <span>Languages</span>
       </div>
 
-      {_.map(LANGUAGE_DATA, (x, i) => (
+      {LANGUAGE_DATA.map((x, i) => (
         <div key={i} className='my-cv-body-content'>
           <span>{x}</span>
         </div>
@@ -144,7 +143,7 @@ const CVInformation = (props) => {
       </div>
 
       <div className='f-col w-max-content'>
-        {_.map(SOCICAL_DATA, (x, i) => (
+        {SOCICAL_DATA.map((x, i) => (
           <a href={x.value} key={i} target=' ' className='my-cv-body-social'>
             {x.title}
           </a>
@@ -153,7 +152,7 @@ const CVInformation = (props) => {
     </div>
   );
 
-  const hobbiesArr = (arr = []) => _.map(arr, (x, i) => (
+  const hobbiesArr = (arr = []) => arr.map((x, i) => (
     <div key={i} className='my-cv-hobbies'>
       {x.icon && (
         <img
